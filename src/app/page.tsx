@@ -1,12 +1,15 @@
+import Footer from "@/components/footer/Footer";
+import Header from "@/components/header/Header";
 import SearchInputDropdown from "@/components/inputs/SearchInputDropdown";
 
 export default function SearchPage() {
   return (
-    <div className="p-10 relative min-h-screen w-full bg-cover bg-center bg-[url('/background.jpeg')]">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm z-0" />
-      <div className="relative z-10">
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <div className="flex-grow px-5">
         <SearchInputDropdown />
       </div>
+      <Footer />
     </div>
   );
 }
