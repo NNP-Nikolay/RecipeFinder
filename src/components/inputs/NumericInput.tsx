@@ -16,13 +16,11 @@ export default function NumericInput() {
   }
 
   const handleChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (value > 1) {
-        setValue(Number(e.target.value));
-    }
+    setValue(Number(e.target.value));
   }
 
   return (
-    <div className="py-2 px-3 dark:bg-gray-700 rounded-lg" data-hs-input-number="">
+    <div className="py-2 px-3 bg-black/60 backdrop-blur-sm rounded-lg" data-hs-input-number="">
       <div className="w-30 flex justify-between items-center gap-x-5">
         <div className="grow">
           <input
@@ -31,7 +29,7 @@ export default function NumericInput() {
             aria-roledescription="Number field"
             data-hs-input-number-input=""
             onChange={handleChangeValue}
-            value={value}
+            value={value ? value : 1}
           />
         </div>
         <div className="flex justify-end items-center gap-x-1.5">
