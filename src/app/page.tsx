@@ -4,11 +4,11 @@ import SearchInputDropdown from "@/components/inputs/SearchInputDropdown";
 
 export default function SearchPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[url('/bg-recipes.jpg')] bg-cover bg-center">
       <Header />
-      <div className="flex-grow px-5">
+      <main className="flex-grow px-5">
         <SearchInputDropdown />
-      </div>
+      </main>
       <Footer />
     </div>
   );
